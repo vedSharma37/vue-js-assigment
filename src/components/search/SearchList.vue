@@ -11,25 +11,25 @@
                     <li><span class="label">GENDER</span> <span class="value">{{data.gender}}</span></li>
                     <li><span class="label">ORIGIN</span> <span class="value">{{data.origin.name}}</span></li>
                     <li><span class="label">LAST LOCATION</span> <span class="value">{{data.location.name}}</span></li>
-                </ul>     
+                </ul>
               </div>
-         </div>   
+         </div>
     </div>
 </template>
 
 <script>
 export default {
 
-    name : 'SearchList',
-    props: ["CharacterResultData"],
-    data:function(){
-        return{
-            tileDatas: Array
-        }
-    },
-    created() {
-         this.tileDatas = this.CharacterResultData;
-    },
+  name: 'SearchList',
+  props: ['CharacterResultData'],
+  data: function () {
+    return {
+      tileDatas: Array
+    }
+  },
+  created () {
+    this.tileDatas = this.CharacterResultData
+  }
 
 }
 </script>

@@ -6,32 +6,31 @@
 
 <script>
 
-
 export default {
-    props:['charNameForSearch', 'searchTerm'],
-    name: 'Search',
-    data (){
-        return {
-            searchVal: {},
-        } 
-    },
-
-    methods : {
-        getSearchResult(e){
-            if(e.target.value.length >= 3){
-                let searchString = e.target.value,
-                keySelected = 'name';
-                this.searchVal = {};
-                this.searchVal[keySelected] = this.searchVal[keySelected] || []
-                this.searchVal[keySelected].push(searchString);
-                this.searchTerm(this.searchVal);
-            }else{
-                this.searchVal = {};
-                this.searchTerm(this.searchVal);
-            }
-            console.log(e.target.value)
-        }
+  props: ['charNameForSearch', 'searchTerm'],
+  name: 'Search',
+  data () {
+    return {
+      searchVal: {}
     }
+  },
+
+  methods: {
+    getSearchResult (e) {
+      if (e.target.value.length >= 3) {
+        const searchString = e.target.value
+        const keySelected = 'name'
+        this.searchVal = {}
+        this.searchVal[keySelected] = this.searchVal[keySelected] || []
+        this.searchVal[keySelected].push(searchString)
+        this.searchTerm(this.searchVal)
+      } else {
+        this.searchVal = {}
+        this.searchTerm(this.searchVal)
+      }
+      console.log(e.target.value)
+    }
+  }
 }
 </script>
 

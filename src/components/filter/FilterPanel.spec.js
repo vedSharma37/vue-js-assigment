@@ -7,5 +7,4 @@ describe('FilterPanel', () => {
   it('renders the correct markup', () => {
     expect(wrapper.html()).toContain('<div class="filter-section"></div>')
   })
-
 })
